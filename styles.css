@@ -419,6 +419,32 @@ section { padding-block: 88px; scroll-margin-top: 84px; }
 .timeline-content h3 { font-size: 1.15rem; margin-bottom: 10px; }
 .timeline-content p { color: var(--text-secondary); line-height: 1.65; max-width: 62ch; }
 
+/* ============ Education ============ */
+.education {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 1px solid var(--border);
+}
+.education h3 {
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+  margin-bottom: 16px;
+}
+.education-list { display: flex; flex-wrap: wrap; gap: 12px; }
+.education-list li {
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
 /* ============ Skills ============ */
 .skills-grid { display: flex; flex-wrap: wrap; gap: 12px; }
 .skill-chip {
