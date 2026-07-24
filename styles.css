@@ -425,11 +425,12 @@ section { padding-block: 88px; scroll-margin-top: 84px; }
   padding: 12px 20px;
   border-radius: 999px;
   background: var(--surface);
-  border: 1px solid var(--border);
+  border: 1px solid var(--border-strong);
+  box-shadow: var(--shadow-sm);
   font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-secondary);
-  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast);
+  transition: transform var(--transition-fast), border-color var(--transition-fast), color var(--transition-fast), background var(--transition-fast), box-shadow var(--transition-fast);
 }
 .skill-chip:hover {
   border-color: var(--accent);
