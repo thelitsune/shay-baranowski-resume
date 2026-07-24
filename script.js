@@ -79,4 +79,17 @@
   /* ---------- Footer year ---------- */
   var yearEl = document.getElementById('year');
   if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  /* ---------- Back to top ----------
+     The link targets a position:sticky header, which browsers treat as
+     "already in view" once stuck, so the native #top jump silently does
+     nothing when scrolled down. Scroll the window directly instead. */
+  var reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  document.querySelectorAll('a[href="#top"]').forEach(function (link) {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' });
+      history.pushState(null, '', window.location.pathname + window.location.search);
+    });
+  });
 })();
